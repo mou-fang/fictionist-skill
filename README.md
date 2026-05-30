@@ -1,4 +1,4 @@
-# Novel Writer Skill
+# Fictionist Skill
 
 `novel-writer` is a Codex skill for writing and managing long-form fiction projects. It helps Codex act as a novelist, story editor, continuity keeper, and file-backed project manager for novels, serial fiction, imported manuscripts, outlines, revisions, and canon tracking.
 
