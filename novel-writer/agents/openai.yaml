@@ -1,0 +1,4 @@
+interface:
+  display_name: "Novel Writer"
+  short_description: "Manage novel projects, drafts, canon, and continuity."
+  default_prompt: "Use $novel-writer to create a file-backed novel project with a story bible, outline, and first chapter."
