@@ -82,11 +82,13 @@ Draft with concrete behavior. Let emotion appear through choices, attention, rhy
 After drafting or outlining:
 
 - Remove contradiction before polishing language.
+- Run the mandatory post-write audit on the exact content just produced.
 - Replace generic conflict with specific pressure.
 - Add setup before payoff.
 - Make coincidences cost something or turn them into choices.
 - Strengthen chapter exits.
 - Check that the emotional promise of the genre is being paid, not merely mentioned.
+- Fix line-level issues such as grammar, typos, punctuation, awkward sentences, unclear references, repetition, verbal tics, and stiff expression while preserving voice.
 
 ## 7. Branch And User Choice Handling
 

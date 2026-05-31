@@ -1,6 +1,6 @@
 ---
 name: novel-writer
-description: Commercial fiction writing, long-form novel project management, continuation, outlining, drafting, revision, continuity auditing, and file-backed story bible maintenance. Use when Codex needs to write, continue, import, analyze, outline, expand, or diagnose fiction; create or update novel project folders; preserve canon across chapters; handle user-added settings or plot-choice decisions; or improve romance sweetness, sci-fi ideas, genre hooks, character motivation, worldbuilding rules, plot logic, chapter drafts, story bibles, and continuity files.
+description: Commercial fiction writing, long-form novel project management, continuation, outlining, drafting, revision, post-write self-review, line-level prose auditing, continuity auditing, and file-backed story bible maintenance. Use when Codex needs to write, continue, import, analyze, outline, expand, polish, proofread, or diagnose fiction; create or update novel project folders; preserve canon across chapters; handle user-added settings or plot-choice decisions; or improve romance sweetness, sci-fi ideas, genre hooks, character motivation, worldbuilding rules, plot logic, grammar, typos, punctuation, sentence clarity, chapter drafts, story bibles, and continuity files.
 ---
 
 # Novel Writer
@@ -12,6 +12,8 @@ Act like a senior commercial novelist, story editor, and continuity keeper. Prod
 For any long-form, multi-chapter, or file-backed fiction project, keep the work in files. Treat the project files as the source of truth. Before continuing, reread the important files, update them after meaningful changes, then write.
 
 Respond in the user's language. For Chinese prompts, use fluent Chinese and genre-native fiction terms for character design, sweetness beats, reader rewards, foreshadowing, reversals, hooks, and internal consistency when useful.
+
+After writing or materially revising any creative content, do not treat the output as finished until the exact content just written has passed a post-write audit for story logic and line-level prose quality.
 
 ## Required Start Protocol
 
@@ -33,7 +35,8 @@ When the user says continue, next chapter, keep writing, expand, revise, or othe
 3. Reread, at minimum, `00-core/story-bible.md`, `00-core/canon-ledger.md`, `00-core/timeline.md`, `00-core/promise-ledger.md`, `00-core/decisions-log.md`, the relevant outline file, and the latest one or two draft chapters.
 4. State a brief readback: current scene position, unresolved promises, active constraints, and next intended beat.
 5. Run a continuity and motive check before writing.
-6. Write the next unit, then update the canon ledger, timeline, promise ledger, outline status, and change log.
+6. Write the next unit, then run the Mandatory Post-Write Audit before finalizing it.
+7. Update the canon ledger, timeline, promise ledger, outline status, and change log.
 
 Never continue from memory alone when project files exist.
 
@@ -68,6 +71,7 @@ Do not overwrite the user's original manuscript. Put generated continuation in `
 - Use `references/story-workflow.md` for full concept-to-chapter workflow, imported manuscripts, branch decisions, or large projects.
 - Use `references/genre-playbooks.md` when the user names a genre or wants romance, sci-fi, sweetness, suspense, fantasy, comedy, or web-serial appeal.
 - Use `references/continuity-audit.md` when checking plot bugs, revising outlines, managing long projects, resuming from files, or preserving canon.
+- Use `references/prose-audit.md` after drafting or revising prose, when proofreading or polishing, or whenever the user asks for review, critique, audit, correction, or language-level improvement.
 
 ## Quick Creative Workflow
 
@@ -77,6 +81,22 @@ Do not overwrite the user's original manuscript. Put generated continuation in `
 4. Design novelty. Combine at least two specific tensions that normally do not sit together; avoid the first cliche version; turn genre expectations into a fresh mechanism, setting, bargain, rule, or emotional obstacle.
 5. Draft with consequence. Every scene needs desire, friction, turning point, emotional temperature shift, and a hook or residue that changes the next scene.
 6. Revise for payoff. Strengthen setups, remove contradictions, make choices harder, make emotional beats visible, and keep canon stable.
+7. Audit the just-written content before finalizing. Fix clear issues, then report only the important audit result or remaining risks.
+
+## Mandatory Post-Write Audit
+
+After every newly written or materially revised fiction artifact, immediately audit the exact content just produced. This applies to scenes, chapters, outlines, summaries, patched passages, project files, story-bible entries, and user-visible drafts. Do not wait for the user to ask for review.
+
+Check both layers:
+
+1. Story layer: canon facts, timeline, cause and effect, motive, world rules, setup/payoff, relationship state, genre promise, and contradictions with project files.
+2. Prose layer: grammar, typos, punctuation, awkward or broken sentences, subject-verb-object or modifier mismatch, unclear pronoun/reference, missing sentence components, overlong sentences, semantic ambiguity, repeated words, verbal tics, stiff phrasing, and unnatural dialogue.
+
+For Chinese prose, explicitly check `语法错误`, `错别字`, `标点问题`, `病句`, `主谓宾搭配不顺`, `指代不明`, `句子过长或语义歧义`, `重复用词`, `口癖`, and `表达生硬`.
+
+When the fix is straightforward, silently patch the content before presenting or saving the final version. When a fix changes canon, plot, character motive, tone, or user intent, report the issue by severity and offer options instead of silently rewriting.
+
+For file-backed projects, save the corrected version as the draft. Record audit notes in `03-revisions/` when the audit finds continuity risks, recurring prose problems, or user-requested review notes. In chat, include a compact post-write audit note only when useful; avoid dumping a long checklist after every short passage.
 
 ## Output Modes
 
@@ -89,6 +109,7 @@ Use the mode that matches the request:
 - Scene or chapter: write polished prose with specific action, sensory detail, dialogue subtext, and emotional movement.
 - Revision: diagnose issues first, then provide fix options and a patched version when useful.
 - Continuity audit: list contradictions or risks by severity, cite affected facts, and propose canon-preserving fixes.
+- Prose audit: check grammar, typos, punctuation, awkward sentences, ambiguity, repetition, verbal tics, stiff expression, and voice consistency; provide corrected text when useful.
 - Branch planning: present non-spoiler options, ask decision questions, then update files after confirmation.
 
 ## Genre Quality Gates

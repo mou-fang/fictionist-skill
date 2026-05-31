@@ -13,6 +13,7 @@ The skill teaches an agent to:
 - continue chapters only after rereading the project files;
 - preserve canon, relationship state, world rules, timeline logic, setups, payoffs, and genre promises;
 - help with premise design, outlining, drafting, revision, continuity audits, and branch planning.
+- run a post-write audit after generated content, including continuity, grammar, typos, punctuation, awkward sentences, unclear references, repetition, verbal tics, and stiff expression.
 
 这个 skill 会指导智能体：
 
@@ -35,6 +36,7 @@ fictionist-skill/
       continuity-audit.md
       genre-playbooks.md
       project-workspace.md
+      prose-audit.md
       story-workflow.md
 ```
 
